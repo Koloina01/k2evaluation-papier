@@ -14,7 +14,7 @@ public class Main {
                 System.out.println(ppm);
             }
         } catch (RuntimeException e) {
-            System.err.println("Erreur récupération pièces par marque : " + e.getMessage());
+            throw new RuntimeException("Erreur récupération pièces par marque : " + e.getMessage());
         }
 
         System.out.println();
@@ -24,7 +24,7 @@ public class Main {
             PiecesParModele ppmModele = dr.getPiecesParModele();
             System.out.println(ppmModele);
         } catch (RuntimeException e) {
-            System.err.println("Erreur récupération pièces par modèle : " + e.getMessage());
+            throw new RuntimeException("Erreur récupération pièces par modèle : " + e.getMessage());
         }
 
         System.out.println();
@@ -34,7 +34,7 @@ public class Main {
             TotalPrixMarque tpm = dr.getTotalPrixKIA();
             System.out.println(tpm);
         } catch (RuntimeException e) {
-            System.err.println("Erreur récupération prix total KIA : " + e.getMessage());
+            throw new RuntimeException("Erreur récupération prix total KIA : " + e.getMessage());
         }
     }
 }
